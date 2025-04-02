@@ -1,0 +1,41 @@
+.skills
+    {
+        min-height: 30vh;
+        display: grid;
+        place-content: center;
+        padding: 0 !important;
+            h2{
+                /* haut | droit | bas | gauche */
+                padding: 2rem 0 0 2rem;
+            }
+            .gallery
+            {
+                padding: 2rem 0;
+                overflow: hidden;
+                white-space: nowrap;
+                .image
+                {   
+                    display: inline-block;
+                    animation: linearMove 8s infinite linear;
+                
+                    img
+                    {
+                        object-fit: scale-down;
+                        // background-color:$light-color ;
+                        border-radius: 10px;
+                        /* offset-x | offset-y | blur-radius | color */
+                        box-shadow: 5px 5px 5px rgba(139, 139, 139, 0.8);
+                        width: 150px;
+                        aspect-ratio: 1;
+                        margin: 0 0.5rem;
+                        transition: scale .2s ease-in-out;
+                    }
+                    img:hover
+                    {
+                        background: rgba(255, 255, 255, 0.5);
+                        scale: 1.2;
+
+                    }
+                }
+            }
+        }
