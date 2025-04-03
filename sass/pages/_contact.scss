@@ -1,30 +1,23 @@
 .contact{
-    input[type=text], textarea, input[type=email] {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        margin-right: 0px;
-        margin-left: 0px;
-        resize: vertical;
-      }
-      label{margin-right: 0px;
-        margin-left: 0px;
-        width: 100%;}
+  form{
+  width: 90%;
+  margin: auto;
+  font-family:$text-font;
+  font-size: $font-size-xs;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+    label{
       
-      input[type=submit] {
-        background-color: transparent;
-        color: black;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      
-      input[type=submit]:hover {
-        background-color: gray;
-      }
+      padding: 0.5rem 0;
+    }
+    input, textarea{
+      border: none;
+      border-bottom: #fbdb04 solid 1px;
+      padding-bottom: 0.5rem;
+    }
+
+  }
+
 }

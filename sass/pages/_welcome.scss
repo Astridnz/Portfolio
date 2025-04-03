@@ -1,0 +1,21 @@
+.welcome{
+@include center;
+
+  .title{
+    text-align: center;
+    font-family: $title-font;
+    font-weight: 900;
+    color: transparent;
+    font-size: 5rem;
+    background: url("/assets/img/pexels-pixabay-2150.jpg") repeat;
+    background-position: 42% 50%;
+    background-clip: text;
+  }
+  .subtitle{
+    display: block;
+    text-align: center;
+    // text-transform: uppercase;
+    padding-top:10px;
+  }
+
+}
