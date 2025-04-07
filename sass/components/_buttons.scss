@@ -3,7 +3,7 @@ button{
     border-radius: 50px;
     font-family:$text-font;
     font-size: $font-size-xxs;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 0.7rem;
     background-color: #fbdb04;
     border-color: transparent;
@@ -23,3 +23,91 @@ button{
         background-color: #fbda04ab;
     }
 }
+
+
+/*=============TOGGLE - LIGHT & DARK MODE=============*/
+/*====================================================*/
+.tgl-btn{
+    position: absolute;
+    top: 20px;
+    right:20px; 
+}
+
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .toggle-slot {
+    position: relative;
+    height: calc(10em / 3); /* Réduction à un tiers */
+    width: calc(20em / 3); /* Réduction à un tiers */
+    border: calc(5px / 3) solid #e4e7ec; /* Ajustement des bordures */
+    border-radius: calc(10em / 3);
+    background-color: $section-color-light;
+    transition: background-color 250ms;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot {
+    background-color: $section-color-dark;
+  }
+  
+  .toggle-button {
+    transform: translate(calc(11.75em / 3), calc(1.75em / 3));
+    position: absolute;
+    height: calc(6.5em / 3);
+    width: calc(6.5em / 3);
+    border-radius: 50%;
+    background-color: #ffeccf;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px calc(0.75em / 3) white; /* Ajustement des ombres internes */
+    transform: translate(calc(1.75em / 3), calc(1.75em / 3));
+  }
+  
+  .sun-icon {
+    position: absolute;
+    height: calc(6em / 3);
+    width: calc(6em / 3);
+    color: #ffbb52;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: calc(6em / 3);
+    width: calc(6em / 3);
+    opacity: 1;
+    transform: translate(calc(2em / 3), calc(2em / 3)) rotate(15deg); /* Réduction de la translation */
+      transform-origin :center center ;
+      transition :opacity150ms ;
+  }
+  
+  /* Icône de la lune */
+  .moon-icon {
+    position: absolute;
+    height: calc(6em / 3);
+    width: calc(6em / 3);
+    color: white;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    height: calc(6em / 3);
+    width: calc(6em / 3);
+    opacity: 0;
+    transform: translate(calc(11em / 3), calc(2em / 3)) rotate(0deg); /* Réduction de la translation */
+    transform-origin: center center;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(calc(12em / 3), calc(2em / 3)) rotate(-15deg); /* Réduction de la translation */
+  }
+  

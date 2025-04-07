@@ -1,6 +1,8 @@
 .contact{
   form{
+    // border: red solid;
   width: 90%;
+  height: 90%;
   margin: auto;
   font-family:$text-font;
   font-size: $font-size-xs;
@@ -9,15 +11,17 @@
   justify-content: center;
 
     label{
-      
       padding: 0.5rem 0;
     }
     input, textarea{
       border: none;
       border-bottom: #fbdb04 solid 1px;
-      padding-bottom: 0.5rem;
+      padding: 0.5rem;
+      height: auto;
     }
-
+    textarea{
+      height: 30%;
+    }
   }
 
 }

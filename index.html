@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/sass/app.css">
+    <script src="./script.js" defer></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js" defer></script>
-
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"defer></script>
     <title>Portfolio</title>
 </head>
-<body>
+<body class="">
 
     <div class="container">
         <section class="intro mdl w-rect">
@@ -22,12 +23,29 @@
         </section>
         <section class="work square">
             <h2>Work</h2>
+            <div class="work-container">
+                <div class="work-img"></div>
+                <div class="work-title"></div>
+                <div class="work-description"></div>
+                <div class="comp1"></div>
+                <div class="comp2"></div>
+                <div class="comp3"></div>
+                <div class="work-btn"></div>
+            </div>
         </section>
         <section class="welcome th-rect">
-            <div class="mode">
-                <div><ion-icon class="sun" name="sunny-outline"></ion-icon></div>
-                <div><ion-icon class="moon" name="moon-outline"></ion-icon></div>
-            </div>
+            <label class="tgl-btn">
+                <input class='toggle-checkbox' type='checkbox'></input>
+                <div class='toggle-slot'>
+                    <div class='sun-icon-wrapper'>
+                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                </div>
+                <div class='toggle-button'></div>
+                    <div class='moon-icon-wrapper'>
+                    <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                </div>
+                </div>
+            </label>
             <div class="title">WELCOME</div>
         <!-- <div class="subtitle"> to my own little corner of the web. -->
         </section>
@@ -55,9 +73,9 @@
         <section class="about w-rect">
             <h2>About</h2>
         </section>
-        <section class="contact w-rect">
+        <section class="contact h-rect">
             <h2>Contact</h2>
-            <form action="/my-handling-form-page" method="post">
+            <form action="#" method="post">
             
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name" placeholder="Enter your Name"/>
@@ -73,13 +91,13 @@
                 <button type="submit">Send your message</button>
             </form>
         </section>
-        <section class="poem w-rect">
+        <section class="poem">
             <blockquote>"Codez, rêvez, répétez."</blockquote>
         </section>
-        <section class="link1 square">l1</section>
-        <section class="link2 square">l2</section>
+
         <section class="link3 square">l3</section>
         <section class="weather square">todo : intégrer une API météo ici</section>
+        <footer>copyright etc</footer>
     </div>
 
 </body>

@@ -1,0 +1,35 @@
+work{
+    .work-container {
+        border: red solid;
+        width: 300px; 
+        height: 150px;
+        display: grid;
+        grid-template-columns: 40% repeat(3, 20%);
+        grid-template-rows: 20% 40% repeat(2, 20%);
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "work-img work-title work-title work-title"
+            "work-img wd wd wd"
+            "work-img comp1 comp2 comp3"
+            "work-img work-btn work-btn work-btn";
+    }
+    
+    .work-img { 
+        grid-area: work-img;
+        background-color: yellow;
+    }
+    
+    .work-title { grid-area: work-title; }
+    
+    .work-description { grid-area: wd; }
+    
+    .comp1 { grid-area: comp1; }
+    
+    .comp2 { grid-area: comp2; }
+    
+    .comp3 { grid-area: comp3; }
+    
+    .work-btn { grid-area: work-btn; }
+    
+}

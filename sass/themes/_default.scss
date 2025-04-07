@@ -10,20 +10,21 @@
         p{
             line-height: 1.3em;
         }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fcfafa;
+            opacity: 1;
+            background-size: 32px 32px;background-image:  repeating-linear-gradient(0deg, #f2f2f2, #f2f2f2 1.6px, #fcfafa 1.6px, #fcfafa);
+            z-index: -1; /* Place le pseudo-élément derrière tout le contenu */
+        }
     }
     
-    body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fcfafa;
-    opacity: 1;
-    background-size: 32px 32px;background-image:  repeating-linear-gradient(0deg, #f2f2f2, #f2f2f2 1.6px, #fcfafa 1.6px, #fcfafa);
-    z-index: -1; /* Place le pseudo-élément derrière tout le contenu */
-}
+
 
     img{
         width: 100%;

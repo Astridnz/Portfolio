@@ -1,1 +1,62 @@
 @import 'default';
+
+.dark-mode{
+    color: $text-color-dark;
+    background-color: $body-color-dark;
+    ion-icon{
+        color: $text-color-dark;
+    }
+    // body.dark-mode::before{
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     opacity: 1;
+    //     background-size: 32px 32px;
+    //     background-image:  repeating-linear-gradient(0deg, #5b5b5b, #5b5b5b 2.2px, #292639 2.2px, #292639);
+
+    section{
+        background-color: $section-color-dark;
+    }
+    .skills{
+            img{
+                background-color: #3e385e2d;
+                box-shadow: 5px 5px 5px $shadow-color-dark !important;
+                &:hover{
+                    background: #3e385e !important;
+                }
+            }
+        }
+
+    .intro{
+        .links{
+            ion-icon{
+            background-color: $body-color-dark;
+            }
+        }
+    }
+    }
+
+
+.light-mode{
+    color: $text-color-light;
+
+    // body::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: #fcfafa;
+    //     opacity: 1;
+    //     background-size: 32px 32px;background-image:  repeating-linear-gradient(0deg, #f2f2f2, #f2f2f2 1.6px, #fcfafa 1.6px, #fcfafa);
+    //     z-index: -1; 
+    // }
+     
+    section{
+        background-color: $section-color-light;
+    }
+}   

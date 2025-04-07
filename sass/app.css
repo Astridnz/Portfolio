@@ -39,39 +39,12 @@ blockquote {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.square {
-  aspect-ratio: 1/1;
-}
-
-.w-rect {
-  aspect-ratio: 2/1;
-}
-
-.h-rect {
-  aspect-ratio: 1/2;
-}
-
-.fw-rect {
-  aspect-ratio: 4/1;
-}
-
-.th-rect {
-  aspect-ratio: 2/3;
-}
-
-.mdl {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-}
-
 button {
   max-width: 100%;
   border-radius: 50px;
   font-family: "Poppins", sans-serif;
   font-size: 0.75em;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 0.7rem;
   background-color: #fbdb04;
   border-color: transparent;
@@ -91,19 +64,105 @@ button:hover {
   background-color: rgba(251, 218, 4, 0.6705882353);
 }
 
+/*=============TOGGLE - LIGHT & DARK MODE=============*/
+/*====================================================*/
+.tgl-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.toggle-slot {
+  position: relative;
+  height: 3.3333333333em; /* Réduction à un tiers */
+  width: 6.6666666667em; /* Réduction à un tiers */
+  border: 1.6666666667px solid #e4e7ec; /* Ajustement des bordures */
+  border-radius: 3.3333333333em;
+  background-color: #fcfafa;
+  transition: background-color 250ms;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+  background-color: #414153;
+}
+
+.toggle-button {
+  transform: translate(3.9166666667em, 0.5833333333em);
+  position: absolute;
+  height: 2.1666666667em;
+  width: 2.1666666667em;
+  border-radius: 50%;
+  background-color: #ffeccf;
+  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(0.26, 2, 0.46, 0.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: inset 0px 0px 0px 0.25em white; /* Ajustement des ombres internes */
+  transform: translate(0.5833333333em, 0.5833333333em);
+}
+
+.sun-icon {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  opacity: 1;
+  transform: translate(0.6666666667em, 0.6666666667em) rotate(15deg); /* Réduction de la translation */
+  transform-origin: center center;
+  transition: opacity150ms;
+}
+
+/* Icône de la lune */
+.moon-icon {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  color: white;
+}
+
+.moon-icon-wrapper {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  opacity: 0;
+  transform: translate(3.6666666667em, 0.6666666667em) rotate(0deg); /* Réduction de la translation */
+  transform-origin: center center;
+  transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+  opacity: 1;
+  transform: translate(4em, 0.6666666667em) rotate(-15deg); /* Réduction de la translation */
+}
+
 .container {
   width: 80%;
   margin: 3rem auto;
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(8, 12.5%);
-  gap: 1em 1em;
+  grid-template-rows: repeat(7, 14%) 2%;
+  gap: 1em;
   grid-auto-flow: row;
   justify-content: center;
   align-content: center;
   justify-items: center;
   align-items: center;
-  grid-template-areas: "intro intro welcome welcome" "work work welcome welcome" "work work welcome welcome" "sk sk sk sk" "about about contact contact" "poem poem link1 link2" "poem poem link3 wth";
+  grid-template-areas: "welcome welcome work work" "welcome welcome work work" "intro intro work work" "sk sk sk sk" "about about contact contact" "poem poem contact contact" "poem poem link3 wth" "footer footer footer footer";
 }
 .container section {
   border: rgb(235, 235, 235) solid 1px;
@@ -116,6 +175,7 @@ button:hover {
 
 .intro {
   grid-area: intro;
+  aspect-ratio: 2/1;
 }
 
 .work {
@@ -133,38 +193,79 @@ button:hover {
 
 .about {
   grid-area: about;
+  aspect-ratio: 2/1;
 }
 
 .contact {
   grid-area: contact;
+  aspect-ratio: 2/3;
 }
 
 .poem {
   grid-area: poem;
-}
-
-.link1 {
-  grid-area: link1;
-}
-
-.link2 {
-  grid-area: link2;
+  aspect-ratio: 2/1;
 }
 
 .link3 {
   grid-area: link3;
+  aspect-ratio: 1/1;
 }
 
 .weather {
   grid-area: wth;
+  aspect-ratio: 1/1;
+}
+
+footer {
+  grid-area: footer;
 }
 
 @media screen and (max-width: 767px) {
   .container {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "intro intro" "welcome welcome" "work work" "work work" "sk sk" "about about" "contact contact" "poem poem" "link1 link2" "link3 wth";
+    grid-template-areas: "welcome welcome" "intro intro" "work work" "work work" "sk sk" "about about" "contact contact" "poem poem" "link3 wth" "footer footer";
   }
 }
+footer {
+  background-color: pink;
+  width: 100%;
+  height: 2rem;
+}
+
+work .work-container {
+  border: red solid;
+  width: 300px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 40% repeat(3, 20%);
+  grid-template-rows: 20% 40% repeat(2, 20%);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "work-img work-title work-title work-title" "work-img wd wd wd" "work-img comp1 comp2 comp3" "work-img work-btn work-btn work-btn";
+}
+work .work-img {
+  grid-area: work-img;
+  background-color: yellow;
+}
+work .work-title {
+  grid-area: work-title;
+}
+work .work-description {
+  grid-area: wd;
+}
+work .comp1 {
+  grid-area: comp1;
+}
+work .comp2 {
+  grid-area: comp2;
+}
+work .comp3 {
+  grid-area: comp3;
+}
+work .work-btn {
+  grid-area: work-btn;
+}
+
 .poem {
   background-image: url(/assets/img/pexels-ryank-17731679.jpg);
   background-size: cover;
@@ -211,6 +312,7 @@ button:hover {
 
 .contact form {
   width: 90%;
+  height: 90%;
   margin: auto;
   font-family: "Poppins", sans-serif;
   font-size: 1em;
@@ -224,10 +326,15 @@ button:hover {
 .contact form input, .contact form textarea {
   border: none;
   border-bottom: #fbdb04 solid 1px;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
+  height: auto;
+}
+.contact form textarea {
+  height: 30%;
 }
 
 .welcome {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,19 +345,16 @@ button:hover {
   font-weight: 900;
   color: transparent;
   font-size: 5rem;
-  background: url("/assets/img/pexels-pixabay-2150.jpg") repeat;
   background-position: 42% 50%;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.welcome .subtitle {
-  display: block;
-  text-align: center;
-  padding-top: 10px;
 }
 
 .intro {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: start;
 }
 .intro .links {
   width: 100%;
@@ -261,9 +365,8 @@ button:hover {
 }
 .intro .links ion-icon {
   font-size: 2em;
-  color: white;
-  background: url("/assets/img/pexels-pixabay-2150.jpg") repeat;
-  background-position: 30%;
+  color: black;
+  background-color: #f0eaef;
   border-radius: 50%;
   padding: 0.5rem;
 }
@@ -278,8 +381,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 body p {
   line-height: 1.3em;
 }
-
-body::before {
+body body::before {
   content: "";
   position: absolute;
   top: 0;
@@ -298,4 +400,32 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.dark-mode {
+  color: #f5f4fe;
+  background-color: #2d2d40;
+}
+.dark-mode ion-icon {
+  color: #f5f4fe;
+}
+.dark-mode section {
+  background-color: #414153;
+}
+.dark-mode .skills img {
+  background-color: rgba(62, 56, 94, 0.1764705882);
+  box-shadow: 5px 5px 5px #000c25 !important;
+}
+.dark-mode .skills img:hover {
+  background: #3e385e !important;
+}
+.dark-mode .intro .links ion-icon {
+  background-color: #2d2d40;
+}
+
+.light-mode {
+  color: black;
+}
+.light-mode section {
+  background-color: #fcfafa;
 }/*# sourceMappingURL=app.css.map */

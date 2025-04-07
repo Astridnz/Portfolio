@@ -1,21 +1,18 @@
 .intro{
     position: relative;
+    @include center;
+    flex-direction: column;
+    align-items: start;
     .links{
-
-        // background-color: red;
         width: 100%;
         text-align: end;
         position: absolute; 
         bottom: 0.5rem;
         right: 1rem;
-
-
         ion-icon{
             font-size: $font-size-l;
-            color: white;
-            // background-color: rgb(48, 48, 48);
-            background: url("/assets/img/pexels-pixabay-2150.jpg") repeat;
-            background-position: 30%;
+            color: black;
+            background-color: $body-color-light;
             border-radius: 50%;
             padding: 0.5rem;
         }

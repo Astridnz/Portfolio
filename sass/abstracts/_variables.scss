@@ -4,15 +4,22 @@ $text-font: "Poppins", sans-serif;
 $title-font:"Geist Mono", monospace;
 // $accent-font :;
 
+//==============LIGHT MODE==============//
 
-$background-color : #fcfafa ;
-// $border-color : 
-// $accent-color-100:;
-// $accent-color-300:;
-// $accent-color-500:;
-// $accent-color-700:;
-// $dark-color:;
-// $light-color:;
+$body-color-light :      #f0eaef;
+$section-color-light:    #fcfafa;
+$text-color-light :      black;
+$shadow-color-light:     #ffbb52;
+$accent-color-light:     #D97A8F;
+
+
+//==============DARK MODE==============//
+
+$body-color-dark :      #2d2d40;
+$section-color-dark:    #414153;
+$text-color-dark :      #f5f4fe;
+$shadow-color-dark:     #000c25;
+$accent-color-dark:     #7d8bab;
 
 
 $font-size-xxl: 3em;
