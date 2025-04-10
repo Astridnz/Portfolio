@@ -13,17 +13,17 @@ const applyMode = (isDarkMode) => {
         body.classList.remove("light-mode");
         body.classList.add("dark-mode");
         toggleSlot.style.boxShadow = "0px calc(10px / 3) calc(25px / 3) #0F056B";
-        welcomeTitle.style.background = `url("/assets/img/dark-mode-title.jpg") center repeat`;
+        welcomeTitle.style.background = `url("./assets/img/dark-mode-title.jpg") center repeat`;
         welcomeTitle.style.backgroundClip = "text";
-        poem.style.backgroundImage = `url("/assets/img/pexels-rakicevic-nenad-233369-1262304.jpg")`;
+        poem.style.backgroundImage = `url("./assets/img/pexels-rakicevic-nenad-233369-1262304.jpg")`;
         toggleCheckbox.checked = true; // Cocher le toggle pour le mode sombre
     } else {
         body.classList.remove("dark-mode");
         body.classList.add("light-mode");
         toggleSlot.style.boxShadow = "0px calc(10px / 3) calc(25px / 3) #fcb252";
-        welcomeTitle.style.background = `url("/assets/img/matin.jpg") repeat center`;
+        welcomeTitle.style.background = `url("./assets/img/matin.jpg") repeat center`;
         welcomeTitle.style.backgroundClip = "text";
-        poem.style.backgroundImage = `url(/assets/img/pexels-ryank-17731679.jpg)`;
+        poem.style.backgroundImage = `url(./assets/img/pexels-ryank-17731679.jpg)`;
         toggleCheckbox.checked = false; // Décocher le toggle pour le mode clair
     }
 };
