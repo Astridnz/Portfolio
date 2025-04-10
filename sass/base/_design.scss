@@ -14,10 +14,23 @@
 // .th-rect{
 //     aspect-ratio: 2/3;
 // }
-// .mdl{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: start;
-// }
+.mdl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
 
+.divider{
+    margin: 2rem auto;
+    width: 30%;
+    height: 2px;
+    // background: rgb(255,187,82);
+    // background: radial-gradient(circle, rgba(255,187,82,1) 0%, rgba(217,122,143,1) 100%);
+}
+
+.accent{
+    color: $accent-color-light;
+    font-weight: 500;
+    font-style: italic;
+}

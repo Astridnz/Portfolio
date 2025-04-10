@@ -15,20 +15,35 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+}
+
 h1 {
+  font-size: 2em;
   font-family: "Geist Mono", monospace;
   font-weight: 500;
 }
 
 h2 {
+  font-size: 2em;
   font-family: "Geist Mono", monospace;
   font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: "Geist Mono", monospace;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  padding: 1rem 0;
+  line-height: 3;
+  line-height: 1.5em;
+  text-wrap: pretty;
 }
 
 blockquote {
@@ -37,6 +52,29 @@ blockquote {
   font-family: "Geist Mono", monospace;
   font-weight: 300;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+a {
+  color: black;
+}
+
+.mdl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.divider {
+  margin: 2rem auto;
+  width: 30%;
+  height: 2px;
+}
+
+.accent {
+  color: #D97A8F;
+  font-weight: 500;
+  font-style: italic;
 }
 
 button {
@@ -154,25 +192,29 @@ button:hover {
   width: 80%;
   margin: 3rem auto;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(7, 14%) 2%;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(6, 16%) 4%;
   gap: 1em;
   grid-auto-flow: row;
   justify-content: center;
   align-content: center;
   justify-items: center;
   align-items: center;
-  grid-template-areas: "welcome welcome work work" "welcome welcome work work" "intro intro work work" "sk sk sk sk" "about about contact contact" "poem poem contact contact" "poem poem link3 wth" "footer footer footer footer";
+  grid-template-areas: "welcome work" "welcome work" "intro work" "sk sk" "poem about" "contact about" "footer footer";
 }
 .container section {
-  border: rgb(235, 235, 235) solid 1px;
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: white;
   padding: 1rem;
 }
 
+@media screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "welcome" "intro" "about" "work" "work" "sk" "contact" "poem" "footer";
+  }
+}
 .intro {
   grid-area: intro;
   aspect-ratio: 2/1;
@@ -193,12 +235,11 @@ button:hover {
 
 .about {
   grid-area: about;
-  aspect-ratio: 2/1;
 }
 
 .contact {
   grid-area: contact;
-  aspect-ratio: 2/3;
+  aspect-ratio: 1/1.1;
 }
 
 .poem {
@@ -206,68 +247,34 @@ button:hover {
   aspect-ratio: 2/1;
 }
 
-.link3 {
-  grid-area: link3;
-  aspect-ratio: 1/1;
-}
-
-.weather {
-  grid-area: wth;
-  aspect-ratio: 1/1;
-}
-
 footer {
   grid-area: footer;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "welcome welcome" "intro intro" "work work" "work work" "sk sk" "about about" "contact contact" "poem poem" "link3 wth" "footer footer";
-  }
-}
 footer {
-  background-color: pink;
   width: 100%;
-  height: 2rem;
+  text-align: center;
 }
 
-work .work-container {
-  border: red solid;
-  width: 300px;
-  height: 150px;
-  display: grid;
-  grid-template-columns: 40% repeat(3, 20%);
-  grid-template-rows: 20% 40% repeat(2, 20%);
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "work-img work-title work-title work-title" "work-img wd wd wd" "work-img comp1 comp2 comp3" "work-img work-btn work-btn work-btn";
+.work .moreProjects {
+  border-radius: 10px;
 }
-work .work-img {
-  grid-area: work-img;
-  background-color: yellow;
+.work .moreProjects ion-icon {
+  color: black;
+  font-size: 1rem;
 }
-work .work-title {
-  grid-area: work-title;
+.work .moreProjects .mini {
+  font-weight: 200;
 }
-work .work-description {
-  grid-area: wd;
+
+.about h3 {
+  margin: 4rem;
 }
-work .comp1 {
-  grid-area: comp1;
-}
-work .comp2 {
-  grid-area: comp2;
-}
-work .comp3 {
-  grid-area: comp3;
-}
-work .work-btn {
-  grid-area: work-btn;
+.about p {
+  margin: 0 1.5rem;
 }
 
 .poem {
-  background-image: url(/assets/img/pexels-ryank-17731679.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -312,8 +319,8 @@ work .work-btn {
 
 .contact form {
   width: 90%;
-  height: 90%;
-  margin: auto;
+  height: 95%;
+  margin: 1rem auto;
   font-family: "Poppins", sans-serif;
   font-size: 1em;
   display: flex;
@@ -325,12 +332,12 @@ work .work-btn {
 }
 .contact form input, .contact form textarea {
   border: none;
-  border-bottom: #fbdb04 solid 1px;
+  border-bottom: #ffbb52 solid 1px;
   padding: 0.5rem;
   height: auto;
 }
 .contact form textarea {
-  height: 30%;
+  height: 20%;
 }
 
 .welcome {
@@ -350,9 +357,6 @@ work .work-btn {
 
 .intro {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   align-items: start;
 }
@@ -374,25 +378,7 @@ work .work-btn {
 body {
   font-size: 100%;
   overflow-x: hidden;
-}
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  line-height: 1.2em;
-}
-body p {
-  line-height: 1.3em;
-}
-body body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fcfafa;
-  opacity: 1;
-  background-size: 32px 32px;
-  background-image: repeating-linear-gradient(0deg, #f2f2f2, #f2f2f2 1.6px, #fcfafa 1.6px, #fcfafa);
-  z-index: -1; /* Place le pseudo-élément derrière tout le contenu */
+  background-color: #f0eaef;
 }
 
 img {
@@ -403,29 +389,36 @@ img {
 }
 
 .dark-mode {
-  color: #f5f4fe;
+  color: #fdfdff;
   background-color: #2d2d40;
+  opacity: 1;
+  background-size: 28px 28px;
+  background-image: repeating-linear-gradient(0deg, #202030, #202030 1.4px, #2d2d40 1.4px, #2d2d40);
 }
-.dark-mode ion-icon {
-  color: #f5f4fe;
+.dark-mode ion-icon, .dark-mode a {
+  color: #fdfdff;
 }
 .dark-mode section {
   background-color: #414153;
 }
 .dark-mode .skills img {
-  background-color: rgba(62, 56, 94, 0.1764705882);
+  background-color: #f0eaef;
   box-shadow: 5px 5px 5px #000c25 !important;
 }
 .dark-mode .skills img:hover {
   background: #3e385e !important;
 }
 .dark-mode .intro .links ion-icon {
-  background-color: #2d2d40;
+  color: #2d2d40;
 }
 
 .light-mode {
-  color: black;
+  background-color: #f0eaef;
+  opacity: 1;
+  background-size: 28px 28px;
+  background-image: repeating-linear-gradient(0deg, #c0bbbf, #c0bbbf 1.4px, #f0eaef 1.4px, #f0eaef);
 }
 .light-mode section {
+  border: rgb(235, 235, 235) solid 1px;
   background-color: #fcfafa;
 }/*# sourceMappingURL=app.css.map */
