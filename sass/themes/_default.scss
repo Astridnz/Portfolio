@@ -2,10 +2,18 @@
         font-size: 100%;
         overflow-x: hidden;
         background-color: #f0eaef;
-        min-height: max-content;
+        min-height:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
-
+    section{
+        width: 100%;
+        padding: 1rem;
+        border-radius: 10px;
+        // height: max-content;
+    }
 
     img{
         width: 100%;
