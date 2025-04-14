@@ -3,7 +3,7 @@
     margin: 3rem auto;
     display: grid;
     grid-template-columns: repeat(2, 50%); 
-    grid-template-rows: repeat(6, 16%) 4%; 
+    grid-template-rows: repeat(7, 14%) 2%; 
     gap: 1em;
     grid-auto-flow: row;
     justify-content: center;
@@ -11,12 +11,13 @@
     justify-items: center;
     align-items: center;
     grid-template-areas:
-    "welcome work"
-    "welcome work"
-    "intro work"
-    "sk sk"
+    "welcome about"
+    "welcome about"
+    "intro about"
     "poem about"
-    "contact about"
+    "sk sk"
+    "contact work"
+    "contact work"
     "footer footer"; 
         section{
             width: 100%;
@@ -34,46 +35,46 @@
     grid-template-areas:
     "welcome"
     "intro"
+    "poem" 
     "about"
+    "about"
+    "about"
+    "about"
+    "work"
     "work"
     "work"
     "sk"
     "contact"
-    "poem" 
     "footer";
 }
 
 }
 
 .intro { grid-area: intro;
-    aspect-ratio: 2/1; }
+}
     
-    .work { grid-area: work; }
+.work { grid-area: work; }
     
     .skills { 
         grid-area: sk;
-        // aspect-ratio: 4/1;
+        
     }
     
     .welcome { 
-        grid-area: welcome; 
-        aspect-ratio: 1; 
+        grid-area: welcome;  
         }
     
     .about { 
         grid-area: about;
-        // aspect-ratio: 2/1;
     
     }
     
     .contact { 
         grid-area: contact;
-        aspect-ratio: 1/1.1;
     }
     
     .poem { 
         grid-area: poem;
-        aspect-ratio: 2/1;
     }
     
     footer{
