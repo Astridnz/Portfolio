@@ -4,9 +4,9 @@
     color: $text-color-dark;
     background-color: $body-color-dark;
     background-color: #141414;
-opacity: 1;
-background-image:  linear-gradient(#1c1c1c 1px, transparent 1px), linear-gradient(to right, #1c1c1c 1px, #141414 1px);
-background-size: 20px 20px;;
+    opacity: 1;
+    background-image:  linear-gradient(#1c1c1c 1px, transparent 1px), linear-gradient(to right, #1c1c1c 1px, #141414 1px);
+    background-size: 20px 20px;;
     
     ion-icon, a{
         color: $text-color-dark;
@@ -16,7 +16,7 @@ background-size: 20px 20px;;
     }
     .skills{
             img{
-                background-color: $body-color-light;
+                background-color: $section-color-light;
                 box-shadow: 5px 5px 5px $shadow-color-dark !important;
                 &:hover{
                     background: #3e385e !important;
@@ -35,14 +35,12 @@ background-size: 20px 20px;;
 
 
 .light-mode{
-    background-color: $body-color-light;
-    background-color: #fcf4ff;
     opacity: 1;
     background-image:  linear-gradient(#f4ecfa 1px, transparent 1px), linear-gradient(to right, #f4ecfa 1px, #fcf4ff 1px);
     background-size: 20px 20px;
     
     section{
-        border: rgb(235, 235, 235) solid 1px;
+        border: $border-color-light solid 1px;
         background-color: $section-color-light;
 
     }

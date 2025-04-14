@@ -1,0 +1,19 @@
+.about
+{
+    h2{
+            text-decoration: underline;
+            text-underline-offset: 1rem;
+            text-decoration-color: $orange;
+            &:hover{
+                text-decoration-color: $blue ;
+            }
+    }
+    h3{
+        margin: 2rem;
+    }
+    p{
+        margin: 1rem;
+    }
+    // min-height: max-content;
+
+}

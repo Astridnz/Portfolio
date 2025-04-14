@@ -15,8 +15,20 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
+  text-wrap: balance;
 }
 
 h1 {
@@ -43,6 +55,7 @@ p {
   font-weight: 300;
   line-height: 3;
   line-height: 1.5em;
+  text-wrap: pretty;
 }
 
 blockquote {
@@ -64,12 +77,6 @@ a {
   align-items: start;
 }
 
-.divider {
-  margin: 2rem auto;
-  width: 30%;
-  height: 2px;
-}
-
 .accent {
   color: #D97A8F;
   font-weight: 500;
@@ -83,7 +90,7 @@ button {
   font-size: 0.75em;
   margin-top: 2rem;
   padding: 0.7rem;
-  background-color: #fbdb04;
+  background-color: #a9deec;
   border-color: transparent;
   position: relative;
   top: -5px;
@@ -98,7 +105,7 @@ button {
 button:hover {
   top: 0;
   box-shadow: 2px 2px 2px 0px #a5a3a3;
-  background-color: rgba(251, 218, 4, 0.6705882353);
+  background-color: #a9deec;
 }
 
 /*=============TOGGLE - LIGHT & DARK MODE=============*/
@@ -123,12 +130,12 @@ button:hover {
   width: 6.6666666667em; /* Réduction à un tiers */
   border: 1.6666666667px solid #e4e7ec; /* Ajustement des bordures */
   border-radius: 3.3333333333em;
-  background-color: #fcfafa;
+  background-color: #fefaff;
   transition: background-color 250ms;
 }
 
 .toggle-checkbox:checked ~ .toggle-slot {
-  background-color: #414153;
+  background-color: #212127;
 }
 
 .toggle-button {
@@ -188,6 +195,7 @@ button:hover {
 }
 
 .container {
+  margin-top: 2rem;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -239,24 +247,6 @@ footer {
   text-align: center;
 }
 
-.work .moreProjects {
-  border-radius: 10px;
-}
-.work .moreProjects ion-icon {
-  color: black;
-  font-size: 1rem;
-}
-.work .moreProjects .mini {
-  font-weight: 200;
-}
-
-.about h3 {
-  margin: 2rem;
-}
-.about p {
-  margin: 0 1rem;
-}
-
 .poem {
   background-size: cover;
   background-position: center;
@@ -274,6 +264,12 @@ footer {
 .skills h2 {
   /* haut | droit | bas | gauche */
   padding: 1rem 0 0 1rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #cee5b7;
+}
+.skills h2:hover {
+  text-decoration-color: #ebc8de;
 }
 .skills .gallery {
   padding: 2rem 0;
@@ -300,6 +296,14 @@ footer {
   scale: 1.2;
 }
 
+.contact h2 {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #a9deec;
+}
+.contact h2:hover {
+  text-decoration-color: #ebc8de;
+}
 .contact form {
   width: 90%;
   height: 95%;
@@ -315,9 +319,12 @@ footer {
 }
 .contact form input, .contact form textarea {
   border: none;
-  border-bottom: #ffbb52 solid 1px;
+  border-bottom: #a9deec solid 1px;
   padding: 0.5rem;
   height: auto;
+}
+.contact form input:hover, .contact form textarea:hover {
+  border-bottom: #ebc8de solid 1px;
 }
 .contact form textarea {
   height: 20%;
@@ -353,15 +360,52 @@ footer {
 .intro .links ion-icon {
   font-size: 2em;
   color: black;
-  background-color: #f0eaef;
+  background-color: #fefaff;
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.2rem;
+}
+.intro .links ion-icon:hover {
+  color: #fed6a5;
+}
+
+.work h2 {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #ebc8de;
+}
+.work h2:hover {
+  text-decoration-color: #cee5b7;
+}
+.work .moreProjects {
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+.work .moreProjects ion-icon {
+  color: black;
+  font-size: 1rem;
+}
+.work .moreProjects .mini {
+  font-weight: 200;
+}
+
+.about h2 {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #fed6a5;
+}
+.about h2:hover {
+  text-decoration-color: #a9deec;
+}
+.about h3 {
+  margin: 2rem;
+}
+.about p {
+  margin: 1rem;
 }
 
 body {
   font-size: 100%;
   overflow-x: hidden;
-  background-color: #f0eaef;
   min-height: auto;
   display: flex;
   justify-content: center;
@@ -393,10 +437,10 @@ img {
   color: #fdfdff;
 }
 .dark-mode section {
-  background-color: #414153;
+  background-color: #212127;
 }
 .dark-mode .skills img {
-  background-color: #f0eaef;
+  background-color: #fefaff;
   box-shadow: 5px 5px 5px #000c25 !important;
 }
 .dark-mode .skills img:hover {
@@ -407,13 +451,11 @@ img {
 }
 
 .light-mode {
-  background-color: #f0eaef;
-  background-color: #fcf4ff;
   opacity: 1;
   background-image: linear-gradient(#f4ecfa 1px, transparent 1px), linear-gradient(to right, #f4ecfa 1px, #fcf4ff 1px);
   background-size: 20px 20px;
 }
 .light-mode section {
-  border: rgb(235, 235, 235) solid 1px;
-  background-color: #fcfafa;
+  border: #ebebeb solid 1px;
+  background-color: #fefaff;
 }/*# sourceMappingURL=app.css.map */

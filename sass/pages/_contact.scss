@@ -1,4 +1,12 @@
 .contact{
+  h2{
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: $blue;
+    &:hover{
+        text-decoration-color: $violet ;
+    }
+  }
   form{
   width: 90%;
   height: 95%;
@@ -14,9 +22,12 @@
     }
     input, textarea{
       border: none;
-      border-bottom: $shadow-color-light solid 1px;
+      border-bottom: $blue solid 1px;
       padding: 0.5rem;
       height: auto;
+      &:hover{
+      border-bottom: $violet solid 1px;
+      }
     }
     textarea{
       height: 20%;

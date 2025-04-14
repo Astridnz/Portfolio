@@ -11,9 +11,12 @@
         ion-icon{
             font-size: $font-size-l;
             color: black;
-            background-color: $body-color-light;
+            background-color: $section-color-light;
             border-radius: 50%;
-            padding: 0.5rem;
+            padding: 0.2rem;
+            &:hover{
+            color: $orange;
+            }
         }
     }
 

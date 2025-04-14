@@ -7,6 +7,12 @@
             h2{
                 /* haut | droit | bas | gauche */
                 padding: 1rem 0 0 1rem;
+                text-decoration: underline;
+                text-underline-offset: 1rem;
+                text-decoration-color: $green;
+                &:hover{
+                    text-decoration-color: $violet ;
+                }
             }
             .gallery
             {

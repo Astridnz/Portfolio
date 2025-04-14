@@ -1,4 +1,4 @@
 # Portfolio
 
 <!-- todo -->
-<!-- bckgrd img dans skills en dark-mode -->
+<!-- Rassembler tout le code couleur sur dark et light mode-->

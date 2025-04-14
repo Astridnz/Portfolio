@@ -1,0 +1,21 @@
+.work{
+    h2{
+        text-decoration: underline;
+        text-underline-offset: 1rem;
+        text-decoration-color: $violet;
+        &:hover{
+            text-decoration-color: $green ;
+        }
+    }
+    .moreProjects{
+        margin-top: 2rem;
+        border-radius: 10px;
+        ion-icon{
+            color: $text-color-light;
+            font-size: 1rem;
+        }
+        .mini{
+            font-weight: 200;
+        }
+    }
+}
