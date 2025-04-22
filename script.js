@@ -21,7 +21,7 @@ const applyMode = (isDarkMode) => {
         body.classList.remove("dark-mode");
         body.classList.add("light-mode");
         toggleSlot.style.boxShadow = "0px calc(10px / 3) calc(25px / 3) #fcb252";
-        welcomeTitle.style.background = `url("./assets/img/matin.jpg") repeat center`;
+        welcomeTitle.style.background = `url("./assets/img/image.png") repeat center`;
         welcomeTitle.style.backgroundClip = "text";
         poem.style.backgroundImage = `url(./assets/img/pexels-ryank-17731679.jpg)`;
         toggleCheckbox.checked = false; // Décocher le toggle pour le mode clair

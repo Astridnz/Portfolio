@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/*===================Light Mode===================*/
+/*===================Dark Mode====================*/
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 @keyframes linearMove {
   0% {
     transform: translateX(0);
@@ -27,49 +28,65 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2em;
+  line-height: 1.2;
   text-wrap: balance;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   font-family: "Geist Mono", monospace;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
   font-family: "Geist Mono", monospace;
   font-weight: 500;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: "Geist Mono", monospace;
   font-weight: 400;
-  line-height: 1.5;
 }
 
 p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  line-height: 3;
-  line-height: 1.5em;
+  line-height: 1.5;
   text-wrap: pretty;
 }
 
 blockquote {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: white;
   font-family: "Geist Mono", monospace;
   font-weight: 300;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-a {
-  color: black;
+form input, form textarea {
+  font-family: "Geist Mono", monospace;
+  font-size: 1rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Desktop  */
+@media (min-width: 1024px) {
+  body {
+    font-size: 100%;
+  }
+}
+/* Tablette */
+/*Mobile*/
+@media (max-width: 779px) {
+  .welcome .title {
+    font-size: 4rem !important;
+  }
+}
 .mdl {
   display: flex;
   flex-direction: column;
@@ -78,8 +95,9 @@ a {
 }
 
 .accent {
-  color: #D97A8F;
-  font-weight: 500;
+  text-decoration-line: underline;
+  text-underline-offset: 5px;
+  font-weight: 300;
   font-style: italic;
 }
 
@@ -87,7 +105,7 @@ button {
   max-width: 100%;
   border-radius: 50px;
   font-family: "Poppins", sans-serif;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   margin-top: 2rem;
   padding: 0.7rem;
   background-color: #a9deec;
@@ -135,7 +153,7 @@ button:hover {
 }
 
 .toggle-checkbox:checked ~ .toggle-slot {
-  background-color: #212127;
+  background-color: #1c1f26;
 }
 
 .toggle-button {
@@ -149,8 +167,8 @@ button:hover {
 }
 
 .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
-  background-color: #485367;
-  box-shadow: inset 0px 0px 0px 0.25em white; /* Ajustement des ombres internes */
+  background-color: #bbbaad;
+  box-shadow: inset 0px 0px 0px 0.25em #bbbaad;
   transform: translate(0.5833333333em, 0.5833333333em);
 }
 
@@ -158,7 +176,7 @@ button:hover {
   position: absolute;
   height: 2em;
   width: 2em;
-  color: #ffbb52;
+  color: #ffbe00;
 }
 
 .sun-icon-wrapper {
@@ -166,9 +184,9 @@ button:hover {
   height: 2em;
   width: 2em;
   opacity: 1;
-  transform: translate(0.6666666667em, 0.6666666667em) rotate(15deg); /* Réduction de la translation */
+  transform: translate(0.6666666667em, 0.6666666667em) rotate(15deg);
   transform-origin: center center;
-  transition: opacity150ms;
+  transition: opacity 150ms;
 }
 
 /* Icône de la lune */
@@ -176,7 +194,7 @@ button:hover {
   position: absolute;
   height: 2em;
   width: 2em;
-  color: white;
+  color: #fdfdff;
 }
 
 .moon-icon-wrapper {
@@ -184,67 +202,118 @@ button:hover {
   height: 2em;
   width: 2em;
   opacity: 0;
-  transform: translate(3.6666666667em, 0.6666666667em) rotate(0deg); /* Réduction de la translation */
+  transform: translate(3.6666666667em, 0.6666666667em) rotate(0deg);
   transform-origin: center center;
   transition: opacity 150ms, transform 500ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
 }
 
 .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
   opacity: 1;
-  transform: translate(4em, 0.6666666667em) rotate(-15deg); /* Réduction de la translation */
+  transform: translate(4em, 0.6666666667em) rotate(-15deg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  margin-top: 2rem;
-  width: 80%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  gap: 1rem;
-  grid-template-areas: "welcome about" "welcome about" "intro about" "poem about" "poem about" "sk sk" "sk sk" "contact work" "contact work" "contact work" "contact work" "footer footer";
+  gap: 15px;
+  grid-auto-flow: row;
+  margin-top: 2rem;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "welcome" "welcome" "intro" "poem" "about" "about" "about" "about" "sk" "sk" "work" "work" "work" "contact" "contact" "contact" "footer";
-  }
+footer {
+  grid-area: fo;
 }
-.intro {
-  grid-area: intro;
+
+.contact {
+  grid-area: co;
+  min-height: 500px;
 }
 
 .work {
-  grid-area: work;
+  grid-area: wo;
 }
 
 .skills {
   grid-area: sk;
 }
 
+.intro {
+  grid-area: in;
+  min-height: 200px;
+}
+
 .welcome {
-  grid-area: welcome;
+  grid-area: we;
+  min-height: 250px;
 }
 
 .about {
-  grid-area: about;
-}
-
-.contact {
-  grid-area: contact;
+  grid-area: ab;
 }
 
 .poem {
-  grid-area: poem;
+  grid-area: po;
+  min-height: 250px;
 }
 
-footer {
-  grid-area: footer;
+/* Desktop  */
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "we we ab ab" "we we ab ab" "in in ab ab" "po po ab ab" "po po ab ab" "sk sk sk sk" "sk sk sk sk" "co co wo wo" "co co wo wo" "co co wo wo" "co co wo wo" "fo fo fo fo";
+  }
 }
-
+/* Tablette */
+@media (min-width: 780px) {
+  .container {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "we ab" "in ab" "po ab" "sk sk" "co wo" "fo fo";
+  }
+}
+/*Mobile*/
+@media (max-width: 779px) {
+  .container {
+    width: 90%;
+    grid-template-areas: "we" "in" "ab" "po" "sk" "wo" "co" "fo";
+  }
+}
 footer {
   width: 100%;
   text-align: center;
+}
+
+form {
+  width: 90%;
+  height: 90%;
+  margin: 1rem auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form label {
+  padding: 0.5rem 0;
+}
+form input, form textarea {
+  border-radius: 5px;
+  border: none;
+  border-bottom: #a9deec solid 1px;
+  padding: 0.5rem;
+  height: auto;
+}
+form input:hover, form textarea:hover {
+  border-bottom: #ebc8de solid 1px;
+}
+form textarea {
+  height: 20%;
 }
 
 .poem {
@@ -278,7 +347,7 @@ footer {
 }
 .skills .gallery .image {
   display: inline-block;
-  animation: linearMove 8s infinite linear;
+  animation: linearMove 4s infinite linear;
 }
 .skills .gallery .image img {
   -o-object-fit: scale-down;
@@ -292,7 +361,6 @@ footer {
   transition: scale 0.2s ease-in-out;
 }
 .skills .gallery .image img:hover {
-  background: rgba(255, 255, 255, 0.5);
   scale: 1.2;
 }
 
@@ -303,31 +371,6 @@ footer {
 }
 .contact h2:hover {
   text-decoration-color: #ebc8de;
-}
-.contact form {
-  width: 90%;
-  height: 95%;
-  margin: 1rem auto;
-  font-family: "Poppins", sans-serif;
-  font-size: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.contact form label {
-  padding: 0.5rem 0;
-}
-.contact form input, .contact form textarea {
-  border: none;
-  border-bottom: #a9deec solid 1px;
-  padding: 0.5rem;
-  height: auto;
-}
-.contact form input:hover, .contact form textarea:hover {
-  border-bottom: #ebc8de solid 1px;
-}
-.contact form textarea {
-  height: 20%;
 }
 
 .welcome {
@@ -358,7 +401,7 @@ footer {
   right: 1rem;
 }
 .intro .links ion-icon {
-  font-size: 2em;
+  font-size: 2rem;
   color: black;
   background-color: #fefaff;
   border-radius: 50%;
@@ -381,7 +424,7 @@ footer {
   border-radius: 10px;
 }
 .work .moreProjects ion-icon {
-  color: black;
+  color: #000213;
   font-size: 1rem;
 }
 .work .moreProjects .mini {
@@ -396,10 +439,32 @@ footer {
 .about h2:hover {
   text-decoration-color: #a9deec;
 }
-.about h3 {
-  margin: 2rem;
+.about .about__bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.about p {
+.about .about__bio .about__intro {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about .about__bio .about__intro img {
+  margin: 0 0.5rem 0 2rem;
+  aspect-ratio: 1;
+  max-width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+}
+.about .about__bio .about__intro h3 {
+  margin: 0 2rem 0 0.5rem;
+}
+.about .about__bio p {
   margin: 1rem;
 }
 
@@ -425,37 +490,48 @@ img {
      object-fit: cover;
 }
 
+.light-mode {
+  color: #000213;
+  opacity: 1;
+  background-image: linear-gradient(#dcd4d4 1px, transparent 1px), linear-gradient(to right, #dcd4d4 1px, #fefaff 1px);
+  background-size: 60px 60px;
+}
+.light-mode ion-icon, .light-mode a {
+  color: #000213;
+}
+.light-mode section {
+  background-color: #fefaff;
+  border: #ada7a7 solid 1px;
+}
+.light-mode form input, .light-mode form textarea {
+  background-color: #ffffff;
+  color: #000213;
+}
+.light-mode .accent {
+  text-decoration-color: #fed6a5;
+}
+
 .dark-mode {
   color: #fdfdff;
-  background-color: #2d2d40;
-  background-color: #141414;
   opacity: 1;
-  background-image: linear-gradient(#1c1c1c 1px, transparent 1px), linear-gradient(to right, #1c1c1c 1px, #141414 1px);
-  background-size: 20px 20px;
+  background-image: linear-gradient(rgb(65, 65, 65) 1px, transparent 1px), linear-gradient(to right, rgb(65, 65, 65) 1px, #141414 1px);
+  background-size: 50px 50px;
 }
 .dark-mode ion-icon, .dark-mode a {
   color: #fdfdff;
 }
 .dark-mode section {
-  background-color: #212127;
+  background-color: #1c1f26;
+  border: #363b44 solid 1px;
 }
-.dark-mode .skills img {
-  background-color: #fefaff;
-  box-shadow: 5px 5px 5px #000c25 !important;
+.dark-mode form input, .dark-mode form textarea {
+  background-color: #434752;
+  color: #fdfdff;
 }
-.dark-mode .skills img:hover {
-  background: #3e385e !important;
+.dark-mode .accent {
+  text-decoration-color: #fed6a5;
 }
-.dark-mode .intro .links ion-icon {
-  color: #2d2d40;
-}
-
-.light-mode {
-  opacity: 1;
-  background-image: linear-gradient(#f4ecfa 1px, transparent 1px), linear-gradient(to right, #f4ecfa 1px, #fcf4ff 1px);
-  background-size: 20px 20px;
-}
-.light-mode section {
-  border: #ebebeb solid 1px;
-  background-color: #fefaff;
+.dark-mode .intro ion-icon {
+  color: #fdfdff;
+  background-color: transparent;
 }/*# sourceMappingURL=app.css.map */

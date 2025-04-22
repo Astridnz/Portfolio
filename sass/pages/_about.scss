@@ -1,19 +1,40 @@
 .about
 {
     h2{
-            text-decoration: underline;
-            text-underline-offset: 1rem;
-            text-decoration-color: $orange;
-            &:hover{
-                text-decoration-color: $blue ;
-            }
+        text-decoration: underline;
+        text-underline-offset: 1rem;
+        text-decoration-color: $orange;
+        &:hover{
+            text-decoration-color: $blue ;
+        }
     }
-    h3{
-        margin: 2rem;
-    }
-    p{
-        margin: 1rem;
-    }
-    // min-height: max-content;
+    .about__bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+        .about__intro{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            img{
+                margin: 0 0.5rem 0 2rem;
+                // border: forestgreen solid;
+                aspect-ratio: 1;
+                max-width: 150px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+        h3{
+            // border: yellow solid ;
+            margin: 0 2rem 0 0.5rem;
+        }
+        }
+        p{
+            margin: 1rem;
+        }
+    }
 }

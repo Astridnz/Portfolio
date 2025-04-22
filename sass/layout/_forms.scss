@@ -1,0 +1,31 @@
+form
+{
+    width: 90%;
+    height: 90%;
+    margin:  1rem auto;
+    font-family:$text-font;
+    font-size: $font-size-xs;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    label
+    {
+        padding: 0.5rem 0;
+    }
+    input, textarea
+    {
+        border-radius: 5px;
+        border: none;
+        border-bottom: $blue solid 1px;
+        padding: 0.5rem;
+        height: auto;
+        &:hover
+        {
+        border-bottom: $violet solid 1px;
+        }
+    }
+    textarea
+    {
+        height: 20%;
+    }
+    }

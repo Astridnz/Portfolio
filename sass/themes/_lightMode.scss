@@ -1,0 +1,30 @@
+.light-mode
+{
+    color: $text-color-light;
+    opacity: 1;
+    background-image: 
+        linear-gradient(#dcd4d4 1px, transparent 1px), 
+        linear-gradient(to right, #dcd4d4 1px, #fefaff 1px);
+    background-size: 60px 60px;
+        ion-icon, a
+        {
+            color: $text-color-light;
+        }
+        section
+        {
+        background-color: $section-color-light;
+        border: $border-color-light solid 1px;
+        }
+        form
+        {
+            input, textarea
+            {
+                background-color: $accent-color-light;
+                color: $text-color-light;
+            }    
+        }
+        .accent
+        {
+            text-decoration-color: $orange;
+        }
+}       

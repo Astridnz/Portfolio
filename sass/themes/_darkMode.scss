@@ -1,0 +1,38 @@
+.dark-mode
+{
+    color: $text-color-dark;
+    opacity: 1;
+    background-image:  linear-gradient(rgb(65, 65, 65) 1px, transparent 1px), 
+                        linear-gradient(to right, rgb(65, 65, 65) 1px, #141414 1px);
+    background-size: 50px 50px;;
+        ion-icon, a
+        {
+        color: $text-color-dark;
+        }
+        section
+        {
+            background-color: $section-color-dark;
+            border: $border-color-dark solid 1px; 
+        }
+        form
+        {
+            input, textarea
+            {
+                background-color: $accent-color-dark;
+                color: $text-color-dark;
+            }    
+        }
+        .accent
+        {
+            text-decoration-color: $orange;
+        }
+        .intro
+        {
+            ion-icon
+            {
+                color: $text-color-dark;
+                background-color: transparent;
+            }
+        }
+
+}

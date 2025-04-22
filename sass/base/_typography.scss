@@ -1,8 +1,7 @@
 h1, h2, h3, h4, h5, h6{
-    line-height: 1.2em;
+    line-height: 1.2;
     text-wrap: balance;
 }
-
 h1{
     font-size: $font-size-l;
     font-family: $title-font;
@@ -17,15 +16,12 @@ h3{
     font-size: $font-size-m;
     font-family: $title-font;
     font-weight: 400;
-    line-height: 1.5;
-    
 }
 p{
 
     font-family: $text-font;
     font-weight: 300;
-    line-height: 3;
-    line-height: 1.5em;
+    line-height: 1.5;
     text-wrap: pretty;
 }
 blockquote{
@@ -33,9 +29,38 @@ blockquote{
     color: white;
     font-family: $title-font;
     font-weight: 300;
-    background-color: rgba(255, 255, 255, 0.2)
+    background-color: rgba(255, 255, 255, 0.2);
+}
+form
+{
+    input, textarea
+    {
+        font-family: $title-font;
+        font-size: $font-size-xs;
+    }    
 }
 
 a{
-    color: black;
+    text-decoration: none;
+}
+
+/* Desktop  */
+@media (min-width: 1024px) {
+body{
+    font-size: 100%;
+}
+}
+
+/* Tablette */
+@media (min-width: 780px) {
+
+}
+
+/*Mobile*/
+@media (max-width: 779px) {
+.welcome{
+    .title{
+        font-size: 4rem !important;
+    }
+}
 }

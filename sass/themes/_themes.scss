@@ -1,47 +1,8 @@
 @import 'default';
-
-.dark-mode{
-    color: $text-color-dark;
-    background-color: $body-color-dark;
-    background-color: #141414;
-    opacity: 1;
-    background-image:  linear-gradient(#1c1c1c 1px, transparent 1px), linear-gradient(to right, #1c1c1c 1px, #141414 1px);
-    background-size: 20px 20px;;
-    
-    ion-icon, a{
-        color: $text-color-dark;
-    }
-    section{
-        background-color: $section-color-dark;
-    }
-    .skills{
-            img{
-                background-color: $section-color-light;
-                box-shadow: 5px 5px 5px $shadow-color-dark !important;
-                &:hover{
-                    background: #3e385e !important;
-                }
-            }
-        }
-
-    .intro{
-        .links{
-            ion-icon{
-            color: $body-color-dark;
-            }
-        }
-    }
-    }
+@import 'lightMode';
+@import 'darkMode';
 
 
-.light-mode{
-    opacity: 1;
-    background-image:  linear-gradient(#f4ecfa 1px, transparent 1px), linear-gradient(to right, #f4ecfa 1px, #fcf4ff 1px);
-    background-size: 20px 20px;
-    
-    section{
-        border: $border-color-light solid 1px;
-        background-color: $section-color-light;
 
-    }
-}   
+
+

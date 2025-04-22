@@ -1,86 +1,100 @@
-.container {
-    margin-top: 2rem;
-    width: 80%;
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(12, 1fr); 
-    gap: 1rem; 
-    grid-template-areas: 
-        "welcome about"
-        "welcome about"
-        "intro about"
-        "poem about"
-        "poem about"
-        "sk sk"
-        "sk sk"
-        "contact work"
-        "contact work"
-        "contact work"
-        "contact work"
-        "footer footer"; 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-@media screen and (max-width: 767px){
 .container{
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "welcome"
-    "welcome"
-    "intro"
-    "poem"
-    "about"
-    "about"
-    "about"
-    "about"
-    "sk"
-    "sk"
-    "work"
-    "work"
-    "work"
-    "contact"
-    "contact"
-    "contact"
-    "footer";
+    display: grid;
+    gap: 15px;
+    grid-auto-flow: row;
+    margin-top: 2rem;
+}
+    
+footer { grid-area: fo; }
+
+.contact { 
+    grid-area: co; 
+    min-height: 500px;
 }
 
-}
+.work { grid-area: wo; }
+
+.skills { grid-area: sk; }
 
 .intro { 
-    grid-area: intro;
-
+    grid-area: in;
+    min-height: 200px;
 }
-    
-.work { 
-    grid-area: work;
 
+.welcome { 
+    grid-area: we;
+    min-height: 250px;
 }
-    
 
-    .skills { 
-        grid-area: sk;
-    }
-    
-    .welcome { 
-        grid-area: welcome;
+.about 
+{ 
+    grid-area: ab;
+}
+
+.poem 
+{ 
+    grid-area: po;
+    min-height: 250px;
+}
+
+    /* Desktop  */
+    @media (min-width: 1024px)
+    {
+        .container 
+        {   
+            width: 80%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+            "we we ab ab"
+            "we we ab ab"
+            "in in ab ab"
+            "po po ab ab"
+            "po po ab ab"
+            "sk sk sk sk"
+            "sk sk sk sk"
+            "co co wo wo"
+            "co co wo wo"
+            "co co wo wo"
+            "co co wo wo"
+            "fo fo fo fo";
         }
-    
-    .about { 
-        grid-area: about;
+    } 
 
-    
+    /* Tablette */
+    @media (min-width: 780px) 
+    { 
+        .container {
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "we ab"
+                "in ab"
+                "po ab"
+                "sk sk"
+                "co wo"
+                "fo fo";
+            }
     }
-    
-    .contact { 
-        grid-area: contact;
-    }
-    
-    .poem { 
-        grid-area: poem;
 
-    }
-    
-    footer{
-        grid-area:footer;
+    /*Mobile*/
+    @media (max-width: 779px) { 
+        .container {
+            width: 90%;
+            grid-template-areas:
+                "we"
+                "in"
+                "ab"
+                "po"
+                "sk"
+                "wo"
+                "co"
+                "fo"
+                ;
+            }
     }

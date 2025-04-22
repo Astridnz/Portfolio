@@ -66,8 +66,8 @@ button{
   }
   
   .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
-    background-color: #485367;
-    box-shadow: inset 0px 0px 0px calc(0.75em / 3) white; /* Ajustement des ombres internes */
+    background-color: $moon-color; // todo : ajuster le couleur de la pastille en mode dark
+    box-shadow: inset 0px 0px 0px calc(0.75em / 3) $moon-color;
     transform: translate(calc(1.75em / 3), calc(1.75em / 3));
   }
   
@@ -75,7 +75,7 @@ button{
     position: absolute;
     height: calc(6em / 3);
     width: calc(6em / 3);
-    color: #ffbb52;
+    color: $sun-color;
   }
   
   .sun-icon-wrapper {
@@ -83,9 +83,9 @@ button{
     height: calc(6em / 3);
     width: calc(6em / 3);
     opacity: 1;
-    transform: translate(calc(2em / 3), calc(2em / 3)) rotate(15deg); /* Réduction de la translation */
+    transform: translate(calc(2em / 3), calc(2em / 3)) rotate(15deg);
       transform-origin :center center ;
-      transition :opacity150ms ;
+      transition :opacity 150ms;
   }
   
   /* Icône de la lune */
@@ -93,7 +93,7 @@ button{
     position: absolute;
     height: calc(6em / 3);
     width: calc(6em / 3);
-    color: white;
+    color: $text-color-dark;
   }
   
   .moon-icon-wrapper {
@@ -101,13 +101,13 @@ button{
     height: calc(6em / 3);
     width: calc(6em / 3);
     opacity: 0;
-    transform: translate(calc(11em / 3), calc(2em / 3)) rotate(0deg); /* Réduction de la translation */
+    transform: translate(calc(11em / 3), calc(2em / 3)) rotate(0deg);
     transform-origin: center center;
     transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
   }
   
   .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
     opacity: 1;
-    transform: translate(calc(12em / 3), calc(2em / 3)) rotate(-15deg); /* Réduction de la translation */
+    transform: translate(calc(12em / 3), calc(2em / 3)) rotate(-15deg); 
   }
   

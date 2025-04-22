@@ -1,37 +1,31 @@
-
-
 $text-font: "Poppins", sans-serif;
 $title-font:"Geist Mono", monospace;
-// $accent-font :;
 
-//==============LIGHT MODE==============//
+$font-size-xxl: 3rem;
+$font-size-xl: 2.5rem;
+$font-size-l: 2rem;
+$font-size-m: 1.5rem;
+$font-size-s: 1.25rem;
+$font-size-xs: 1rem;
+$font-size-xxs: 0.75rem;
 
-// $body-color-light :      #f0eaef;
-$section-color-light:    #fefaff;
-$border-color-light :    #ebebeb;
-$text-color-light :      black;
-$shadow-color-light:     #ffbb52;
-$accent-color-light:     #D97A8F;
+$orange :   #fed6a5;
+$yellow :   #faf6b7;
+$green :    #cee5b7;
+$blue :     #a9deec;
+$violet :   #ebc8de;
 
-$orange : #fed6a5;
-$yellow :#faf6b7;
-$green : #cee5b7;
-$blue : #a9deec;
-$violet : #ebc8de;
+$sun-color :#ffbe00;
+$moon-color :#bbbaad;
 
-//==============DARK MODE==============//
+/*===================Light Mode===================*/
+$section-color-light: #fefaff;
+$border-color-light:  #ada7a7;
+$text-color-light:    #000213;
+$accent-color-light: #ffffff; 
 
-$body-color-dark :      #2d2d40;
-$section-color-dark:    #212127;
-$text-color-dark :      #fdfdff;
-$shadow-color-dark:     #000c25;
-$accent-color-dark:     #7d8bab;
-
-
-$font-size-xxl: 3em;
-$font-size-xl: 2.5em;
-$font-size-l: 2em;
-$font-size-m: 1.5em;
-$font-size-s: 1.25em;
-$font-size-xs: 1em;
-$font-size-xxs: 0.75em;
+/*===================Dark Mode====================*/
+$section-color-dark:  #1c1f26;
+$border-color-dark:   #363b44;
+$text-color-dark:     #fdfdff;
+$accent-color-dark: #434752; 
