@@ -283,6 +283,12 @@ footer {
     width: 90%;
     grid-template-areas: "we" "in" "ab" "po" "sk" "wo" "co" "fo";
   }
+  .about .about__intro {
+    flex-direction: column;
+  }
+  .about img {
+    margin-bottom: 1rem;
+  }
 }
 footer {
   width: 100%;
@@ -448,7 +454,7 @@ form textarea {
 .about .about__bio .about__intro {
   margin-top: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 .about .about__bio .about__intro img {

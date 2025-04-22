@@ -13,15 +13,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
         .about__intro{
             margin-top: 2rem;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             img{
                 margin: 0 0.5rem 0 2rem;
-                // border: forestgreen solid;
                 aspect-ratio: 1;
                 max-width: 150px;
                 object-fit: cover;
@@ -29,7 +27,6 @@
                 border-radius: 50%;
             }
         h3{
-            // border: yellow solid ;
             margin: 0 2rem 0 0.5rem;
         }
         }
@@ -38,3 +35,4 @@
         }
     }
 }
+

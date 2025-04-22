@@ -97,4 +97,12 @@ footer { grid-area: fo; }
                 "fo"
                 ;
             }
+            .about{
+                .about__intro{
+                    flex-direction: column;
+                }
+                img{
+                    margin-bottom: 1rem;
+                }
+            }
     }
