@@ -86,6 +86,9 @@ a {
   .welcome .title {
     font-size: 4rem !important;
   }
+  .about h3 {
+    font-size: 1.25rem;
+  }
 }
 .mdl {
   display: flex;
@@ -108,7 +111,7 @@ button {
   font-size: 0.75rem;
   margin-top: 2rem;
   padding: 0.7rem;
-  background-color: #a9deec;
+  background-color: #c5e3fd;
   border-color: transparent;
   position: relative;
   top: -5px;
@@ -123,7 +126,7 @@ button {
 button:hover {
   top: 0;
   box-shadow: 2px 2px 2px 0px #a5a3a3;
-  background-color: #a9deec;
+  background-color: #c5e3fd;
 }
 
 /*=============TOGGLE - LIGHT & DARK MODE=============*/
@@ -311,12 +314,12 @@ form label {
 form input, form textarea {
   border-radius: 5px;
   border: none;
-  border-bottom: #a9deec solid 1px;
+  border-bottom: #c5e3fd solid 1px;
   padding: 0.5rem;
   height: auto;
 }
 form input:hover, form textarea:hover {
-  border-bottom: #ebc8de solid 1px;
+  border-bottom: #ffd7df solid 1px;
 }
 form textarea {
   height: 20%;
@@ -344,7 +347,7 @@ form textarea {
   text-decoration-color: #cee5b7;
 }
 .skills h2:hover {
-  text-decoration-color: #ebc8de;
+  text-decoration-color: #ffd7df;
 }
 .skills .gallery {
   padding: 2rem 0;
@@ -373,10 +376,10 @@ form textarea {
 .contact h2 {
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: #a9deec;
+  text-decoration-color: #c5e3fd;
 }
 .contact h2:hover {
-  text-decoration-color: #ebc8de;
+  text-decoration-color: #ffd7df;
 }
 
 .welcome {
@@ -414,13 +417,13 @@ form textarea {
   padding: 0.2rem;
 }
 .intro .links ion-icon:hover {
-  color: #fed6a5;
+  color: #fccd7f;
 }
 
 .work h2 {
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: #ebc8de;
+  text-decoration-color: #ffd7df;
 }
 .work h2:hover {
   text-decoration-color: #cee5b7;
@@ -440,10 +443,10 @@ form textarea {
 .about h2 {
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: #fed6a5;
+  text-decoration-color: #fccd7f;
 }
 .about h2:hover {
-  text-decoration-color: #a9deec;
+  text-decoration-color: #c5e3fd;
 }
 .about .about__bio {
   display: flex;
@@ -514,7 +517,7 @@ img {
   color: #000213;
 }
 .light-mode .accent {
-  text-decoration-color: #fed6a5;
+  text-decoration-color: #fccd7f;
 }
 
 .dark-mode {
@@ -535,7 +538,7 @@ img {
   color: #fdfdff;
 }
 .dark-mode .accent {
-  text-decoration-color: #fed6a5;
+  text-decoration-color: #fccd7f;
 }
 .dark-mode .intro ion-icon {
   color: #fdfdff;
