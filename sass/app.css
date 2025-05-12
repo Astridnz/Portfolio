@@ -7,7 +7,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-700%);
   }
 }
 *, ::before, ::after {
@@ -296,6 +296,7 @@ footer {
 footer {
   width: 100%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 form {
@@ -356,7 +357,7 @@ form textarea {
 }
 .skills .gallery .image {
   display: inline-block;
-  animation: linearMove 4s infinite linear;
+  animation: linearMove 10s infinite linear;
 }
 .skills .gallery .image img {
   -o-object-fit: scale-down;
