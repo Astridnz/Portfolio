@@ -1,44 +1,57 @@
-.skills
-    {
-        min-height: 30vh;
-        display: grid;
-        place-content: center;
-        padding: 0 !important;
-            h2{
-                /* haut | droit | bas | gauche */
-                padding: 1rem 0 0 1rem;
-                text-decoration: underline;
-                text-underline-offset: 1rem;
-                text-decoration-color: $green;
-                &:hover{
-                    text-decoration-color: $violet ;
-                }
-            }
-            .gallery
-            {
-                padding: 2rem 0;
-                overflow: hidden;
-                white-space: nowrap;
-                .image
-                {   
-                    display: inline-block;
-                    animation: linearMove 10s infinite linear;
-                
-                    img
-                    {
-                        object-fit: scale-down;
-                        border-radius: 10px;
-                        /* offset-x | offset-y | blur-radius | color */
-                        box-shadow: 5px 5px 5px rgba(139, 139, 139, 0.8);
-                        width: 150px;
-                        aspect-ratio: 1;
-                        margin: 0 0.5rem;
-                        transition: scale .2s ease-in-out;
-                    }
-                    img:hover
-                    {
-                        scale: 1.2;
-                    }
-                }
-            }
-        }
+.skills {
+	h2{
+		padding-left: 1rem;
+		padding-bottom: 1rem;
+		text-decoration: underline;
+		text-underline-offset: 1rem;
+		text-decoration-color: $violet;
+		&:hover{
+			text-decoration-color: $green ;
+		}
+	}
+	align-items: center;
+	background: #E3E3E3;
+	justify-content: center;
+	padding: 1rem 0;
+}
+
+$animationSpeed: 35s;
+
+.slider {
+
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+	
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 12);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+}
+
+.comp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	p{
+		font-size:$font-size-m;
+		font-weight: 500;
+		font-family: $title-font;
+		margin-left: 0.5rem;
+	}
+	img{
+		padding: 0.5rem 0;
+		object-fit: contain;
+		width: 50%;
+	}
+}
