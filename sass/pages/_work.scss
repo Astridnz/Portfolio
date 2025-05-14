@@ -3,21 +3,91 @@
         text-decoration: underline;
         text-underline-offset: 1rem;
         text-decoration-color: $green;
+        .mini{
+          font-style: italic;
+          font-size: smaller;
+        }
         &:hover{
             text-decoration-color: $violet ;
         }
     }
-    .moreProjects{
-        margin-top: 2rem;
-        border-radius: 10px;
-        ion-icon{
-            color: $text-color-light;
-            font-size: 1rem;
+
+
+.work__wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+
+  .project {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; // Correction: 'none' -> 'no-repeat'
+    transition: flex 0.8s ease;
+    position: relative; // Nécessaire pour positionner .card__head en absolu
+
+    .project__head {
+      background: rgba(252, 205, 127, 0.7);
+      padding: 0.2rem 1rem;
+      transform: rotate(-90deg);
+      transform-origin: 0% 0%;
+      transition: all 0.5s ease-in-out;
+      min-width: 100%;
+        position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: $font-size-s;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      p{
+      font-family: $title-font;
+      text-align: center;
+      }
+      a{
+        display: flex;
+        margin-left: .5rem;
+          ion-icon {
+          font-size: $font-size-m;
         }
-        .mini{
-            font-weight: 200;
-        }
+      }
     }
+
+    &:hover {
+      flex: 10;
+
+      .project__head {
+        text-align: center;
+        transform: rotate(0deg);
+        bottom: 0; 
+      }
+    }
+  }
+
+  .project-1 { 
+    background-image: url('/assets/img/site-1.jpg');
+  }
+
+  .project-2 { 
+    background-image: url('/assets/img/site-2.jpg');
+  }
+
+  .project-3 { 
+    background-image: url('/assets/img/site-3.jpg');
+  }
+
+  .project-4 { 
+    background-image: url('/assets/img/site-4.jpg');
+  }
+
+  .project-5 { 
+    background-image: url('/assets/img/site-5.jpg');
+  }
+}
 }
 
 /*.work{

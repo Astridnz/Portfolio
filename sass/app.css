@@ -442,19 +442,78 @@ form textarea {
   text-underline-offset: 1rem;
   text-decoration-color: #cee5b7;
 }
+.work h2 .mini {
+  font-style: italic;
+  font-size: smaller;
+}
 .work h2:hover {
   text-decoration-color: #ffd7df;
 }
-.work .moreProjects {
-  margin-top: 2rem;
-  border-radius: 10px;
+.work .work__wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
 }
-.work .moreProjects ion-icon {
-  color: #000213;
-  font-size: 1rem;
+.work .work__wrap .project {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: flex 0.8s ease;
+  position: relative;
 }
-.work .moreProjects .mini {
-  font-weight: 200;
+.work .work__wrap .project .project__head {
+  background: rgba(252, 205, 127, 0.7);
+  padding: 0.2rem 1rem;
+  transform: rotate(-90deg);
+  transform-origin: 0% 0%;
+  transition: all 0.5s ease-in-out;
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.work .work__wrap .project .project__head p {
+  font-family: "Geist Mono", monospace;
+  text-align: center;
+}
+.work .work__wrap .project .project__head a {
+  display: flex;
+  margin-left: 0.5rem;
+}
+.work .work__wrap .project .project__head a ion-icon {
+  font-size: 1.5rem;
+}
+.work .work__wrap .project:hover {
+  flex: 10;
+}
+.work .work__wrap .project:hover .project__head {
+  text-align: center;
+  transform: rotate(0deg);
+  bottom: 0;
+}
+.work .work__wrap .project-1 {
+  background-image: url("/assets/img/site-1.jpg");
+}
+.work .work__wrap .project-2 {
+  background-image: url("/assets/img/site-2.jpg");
+}
+.work .work__wrap .project-3 {
+  background-image: url("/assets/img/site-3.jpg");
+}
+.work .work__wrap .project-4 {
+  background-image: url("/assets/img/site-4.jpg");
+}
+.work .work__wrap .project-5 {
+  background-image: url("/assets/img/site-5.jpg");
 }
 
 /*.work{
