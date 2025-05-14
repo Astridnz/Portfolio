@@ -86,6 +86,7 @@ footer { grid-area: fo; }
     @media (max-width: 779px) { 
         .container {
             width: 90%;
+            grid-template-columns: 100%;
             grid-template-areas:
                 "we"
                 "in"

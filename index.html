@@ -7,13 +7,14 @@
     <meta name="keywords" content="portfolio, developper, web">
     <meta name="author" content="Astrid Segard">
     <link rel="stylesheet" href="./sass/app.css">
+    <!-- <script src="./work.js" defer></script> -->
     <script src="./script.js" defer></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js" defer></script>
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"defer></script>
     <title>Portfolio - A.Segard</title>
 </head>
 <body class="">
-
+<!-- !--------------------------------------------------------------------INTRO-------------------------------------------------------------------- -->
     <div class="container">
         <section class="intro mdl">
             <h1>Astrid Segard</h1>
@@ -24,21 +25,43 @@
                 <a href="./assets/CV-Astrid-Segard.pdf" target="_blank"><ion-icon name="document-outline"></ion-icon></a>
             </div>
         </section>
+<!-- !--------------------------------------------------------------------WORK-------------------------------------------------------------------- -->
         <section class="work">
             <h2>Work</h2>
-            <!-- <div class="work-container">
-                <div class="work-img"><img src="/assets/img/site-1.jpg" alt=""></div>
-                <div class="work-title"><h4>Project 1</h4></div>
-                <div class="work-description"><p>Bacon ipsum dolor amet pork belly cow beef frankfurter doner corned beef pork loin. Alcatra ground round pancetta tongue tail. Pork chop picanha tenderloin meatloaf, drumstick frankfurter sausage porchetta. </p></div>
-                <div class="comp1"><ion-icon name="logo-html5"></ion-icon></div>
-                <div class="comp2"><ion-icon name="logo-css3"></ion-icon></div>
-                <div class="comp3"><ion-icon name="logo-javascript"></ion-icon></div>
-                <button class="work-btn">voir le projet</button>
-            </div> -->
+                <!-- <div class="carousel">
+                    <div class="carousel__nav">
+                    <span id="moveLeft" class="carousel__arrow">
+                            <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+                    </svg>
+                        </span>
+                        <span id="moveRight" class="carousel__arrow" >
+                        <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                    </svg>    
+                        </span>
+                    </div>
+                    <div id="carousel-container"></div>
+                        <template id="carousel-item-template">
+                        <div class="carousel-item">
+                        <div class="carousel-item__image"></div>
+                        <div class="carousel-item__info">
+                            <h2 class="carousel-item__subtitle"></h2>
+                            <h1 class="carousel-item__title"></h1>
+                            <p class="carousel-item__description"></p>
+                            <a href="#" class="carousel-item__btn"></a>
+                        </div>
+                        </div>
+                    </template>
+
+                </div> -->
             <div class="moreProjects">
                 <p>More Projects Coming Soon !<br><span class="mini">— Stay in touch</span></p>
             </div>
         </section>
+
+<!-- !--------------------------------------------------------------------WELCOME-------------------------------------------------------------------- -->
+
         <section class="welcome">
             <label class="tgl-btn">
                 <input class='toggle-checkbox' type='checkbox'></input>
@@ -55,6 +78,7 @@
             <div class="title">WELCOME</div>
         <!-- <div class="subtitle"> to my own little corner of the web. -->
         </section>
+<!-- !--------------------------------------------------------------------SKILLS-------------------------------------------------------------------- -->
         
         <section class="skills">
             <h2>Skills</h2>
@@ -115,6 +139,7 @@
                     </div>
                 </div>
         </section>
+<!-- !--------------------------------------------------------------------ABOUT-------------------------------------------------------------------- -->
 
         <section class="about">
             <h2>About</h2>
@@ -139,6 +164,9 @@
                     </p>
                 </div>
         </section>
+
+<!-- !--------------------------------------------------------------------CONTACT-------------------------------------------------------------------- -->
+
         <section class="contact">
             <h2>Contact</h2>
             <form action="https://api.web3forms.com/submit" method="post">
@@ -161,6 +189,8 @@
                 <button type="submit">Send your message</button>
             </form>
         </section>
+<!-- !--------------------------------------------------------------------POEM-------------------------------------------------------------------- -->
+
         <section class="poem">
             <blockquote>"Codez, rêvez, répétez."</blockquote>
         </section>
