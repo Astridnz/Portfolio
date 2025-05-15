@@ -1,6 +1,8 @@
 # Portfolio
 
 <!-- todo -->
-<!-- Rassembler tout le code couleur sur dark et light mode-->
-
-<!-- .accent ==> design ==> changer la couleur -->
+<!-- 
+    Maj link projet
+    +
+    trouver une solution pour le tactile
+ -->
