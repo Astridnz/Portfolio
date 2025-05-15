@@ -1,6 +1,6 @@
 [
     {
-        "image": "assets/site-1.jpg",
+        "image": "../assets/img/site-1.jpg",
         "subtitle": "De la crème au code",
         "title": "Reconversion créative",
         "description": "Hier experte en cosmétiques, aujourd’hui passionnée de développement. Ce projet symbolise mon virage vers un univers plus technique, où chaque ligne de code remplace une formule beauté.",
@@ -8,7 +8,7 @@
         "buttonLink": "./assets/CV-Astrid-Segard.pdf"
     },
     {
-        "image": "assets/site-2.jpg",
+        "image": "../assets/img/site-2.jpg",
         "subtitle": "Pixel après pixel",
         "title": "Formation en action",
         "description": "HTML, CSS, JS… ce projet est en cours d’élaboration pendant ma formation. Il n’est pas encore en ligne, mais il grandit au rythme de mes compétences.",
@@ -16,7 +16,7 @@
         "buttonLink": "./assets/CV-Astrid-Segard.pdf"
     },
     {
-        "image": "assets/site-3.jpg",
+        "image": "../assets/img/site-3.jpg",
         "subtitle": "Tremplin vers l’expérience",
         "title": "En route vers le réel",
         "description": "Fait avec passion, en attendant l’opportunité de transformer mes lignes de code en vraies contributions. Un projet fictif pour annoncer ceux que je construirai demain avec vous.",
@@ -24,7 +24,7 @@
         "buttonLink": "./assets/CV-Astrid-Segard.pdf"
     },
     {
-        "image": "assets/site-4.jpg",
+        "image": "../assets/img/site-4.jpg",
         "subtitle": "Stage wanted",
         "title": "Bientôt du concret",
         "description": "Ce projet est une promesse : celle d’un stage à venir, d’une immersion en équipe, de vrais défis techniques. En attendant, il garde une place bien au chaud dans mon portfolio.",
@@ -32,7 +32,7 @@
         "buttonLink": "./assets/CV-Astrid-Segard.pdf"
     },
     {
-        "image": "assets/site-5.jpg",
+        "image": "../assets/img/site-5.jpg",
         "subtitle": "Mon terrain de jeu",
         "title": "Prototype en liberté",
         "description": "Pas encore finalisé, mais plein d’idées ! Ce projet est une ébauche de ce que j’aime faire : explorer, tester, structurer. Le code me stimule, et ça se sent.",

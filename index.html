@@ -7,11 +7,11 @@
     <meta name="keywords" content="portfolio, developper, web">
     <meta name="author" content="Astrid Segard">
     <link rel="stylesheet" href="./sass/app.css">
-    <!-- <script src="./work.js" defer></script> -->
+    <script src="./modale_work.js" defer></script>
     <script src="./script.js" defer></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js" defer></script>
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"defer></script>
-    <title>Portfolio - A.Segard</title>
+    <title>Portfolio - A.Segard || TEST ||</title>
 </head>
 <body class="">
 <!-- !--------------------------------------------------------------------INTRO-------------------------------------------------------------------- -->
@@ -29,71 +29,72 @@
         <section class="work">
             <h2>Work <span class="mini">-- in progress</span></h2>
 
-                <div class="work__wrap">
-                    <div class="project project-1">
-                        <div class="project__head">
+                <div class="work__list">
+                    <div class="work__project work__project--1">
+                        <div class="work__project-head">
                             <p>Project 1</p>
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="eye-outline"></ion-icon></a>
+                            <button type="button" class="work__btn-modal" data-index="0"><ion-icon name="eye-outline"></ion-icon></button>
                         </div>
                     </div>
-                    <div class="project project-2">
-                        <div class="project__head">
+                    <div class="work__project work__project--2">
+                        <div class="work__project-head">
                             <p>Project 2</p>
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="eye-outline"></ion-icon></a>
+                            <button type="button" class="work__btn-modal"data-index="1"><ion-icon name="eye-outline"></ion-icon></button>
                         </div>
                     </div>
-                    <div class="project project-3">
-                        <div class="project__head">
+                    <div class="work__project work__project--3">
+                        <div class="work__project-head">
                             <p>Project 3</p>
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="eye-outline"></ion-icon></a>
+                            <button type="button" class="work__btn-modal" data-index="2"><ion-icon name="eye-outline"></ion-icon></button>
                         </div>
                     </div>
-                    <div class="project project-4">
-                        <div class="project__head">
+                    <div class="work__project work__project--4">
+                        <div class="work__project-head">
                             <p>Project 4</p>
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="eye-outline"></ion-icon></a>
+                            <button type="button" class="work__btn-modal"data-index="3"><ion-icon name="eye-outline"></ion-icon></button>
                         </div>
                     </div>
-                    <div class="project project-5">
-                        <div class="project__head">
+                    <div class="work__project work__project--5">
+                        <div class="work__project-head">
                             <p>Project 5</p>
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><ion-icon name="eye-outline"></ion-icon></a>
+                            <button type="button" class="work__btn-modal" data-index="4"><ion-icon name="eye-outline"></ion-icon></button>
                         </div>
                     </div>
                 </div> 
 
-
-                <!-- <div class="carousel">
-                    <div class="carousel__nav">
-                    <span id="moveLeft" class="carousel__arrow">
-                            <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-                    </svg>
-                        </span>
-                        <span id="moveRight" class="carousel__arrow" >
-                        <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-                    </svg>    
-                        </span>
-                    </div>
-                    <div id="carousel-container"></div>
-                        <template id="carousel-item-template">
-                        <div class="carousel-item">
-                        <div class="carousel-item__image"></div>
-                        <div class="carousel-item__info">
-                            <h2 class="carousel-item__subtitle"></h2>
-                            <h1 class="carousel-item__title"></h1>
-                            <p class="carousel-item__description"></p>
-                            <a href="#" class="carousel-item__btn"></a>
-                        </div>
-                        </div>
-                    </template>
-
-                </div>-->
+    <dialog id="work-modal" class="work__modal">
+    <button class="work__modal-close" aria-label="Fermer">×</button>
+    <div class="work__modal-carousel">
+        <div class="work__modal-carousel-nav">
+        <span id="moveLeft" class="work__modal-carousel-arrow">
+            <svg class="work__modal-carousel-icon" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+            </svg>
+        </span>
+        <span id="moveRight" class="work__modal-carousel-arrow">
+            <svg class="work__modal-carousel-icon"  width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+            </svg> 
+        </span>
+        </div>
+        <div class="work__modal-carousel-container" id="work-modal-carousel-container"></div>
+        <template id="work-modal-carousel-project-template">
+        <div class="work__modal-carousel-project">
+            <div class="work__modal-carousel-project-image"></div>
+            <div class="work__modal-carousel-project-info">
+            <h2 class="work__modal-carousel-project-subtitle"></h2>
+            <h1 class="work__modal-carousel-project-title"></h1>
+            <p class="work__modal-carousel-project-description"></p>
+            <a href="#" class="work__modal-carousel-project-btn"></a>
+            </div>
+        </div>
+        </template>
+    </div>
+    </dialog>
 
         </section>
 
-<!-- !--------------------------------------------------------------------WELCOME-------------------------------------------------------------------- -->
+       <!-- !--------------------------------------------------------------------WELCOME-------------------------------------------------------------------- -->
 
         <section class="welcome">
             <label class="tgl-btn">
@@ -219,7 +220,7 @@
                 
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                <button type="submit">Send your message</button>
+                <button class="btn-CTA" type="submit">Send your message</button>
             </form>
         </section>
 <!-- !--------------------------------------------------------------------POEM-------------------------------------------------------------------- -->
