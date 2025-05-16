@@ -480,6 +480,8 @@ form textarea {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  width: -moz-max-content;
+  width: max-content;
 }
 .work .work__list .work__project .work__project-head p {
   font-family: "Geist Mono", monospace;
