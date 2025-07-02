@@ -45,6 +45,7 @@
         align-items: center;
         justify-content: space-evenly;
         width: max-content;
+        cursor: pointer;
 
           p {
             font-family: $title-font;
@@ -63,7 +64,9 @@
         }
       }
 
-      &:hover {
+      &:hover,
+      // simule l'effet hover sur mobile
+      &.active {
         flex: 10;
         .work__project-head {
           text-align: center;

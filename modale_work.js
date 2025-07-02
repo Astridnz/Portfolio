@@ -10,14 +10,36 @@ document.addEventListener("DOMContentLoaded", () => {
     carouselData = data;
 
       // Active showModal() au clic 
-        document.querySelectorAll('.work__btn-modal').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+        document.querySelectorAll('.work__project-head').forEach(div => {
+            div.addEventListener('click', function(e) {
             e.preventDefault();
             currentIndex = parseInt(this.dataset.index, 10) || 0;
             showModal(currentIndex);
             });
         });
     });
+
+    // Détecte si on est sur mobile ou tablette (en tactile)
+function isMobile() {
+  return window.innerWidth <= 1023;
+}
+
+document.querySelectorAll('.work__project-head').forEach(head => {
+  head.addEventListener('click', function(e) {
+    // Sur mobile ou tablette uniquement
+    if (isMobile()) {
+      e.preventDefault();
+      const parent = this.closest('.work__project');
+      if (parent) {
+        // Ferme les autres 
+        document.querySelectorAll('.work__project.active').forEach(p => {
+          if (p !== parent) p.classList.remove('active');
+        });
+        parent.classList.toggle('active');
+      }
+    }
+  });
+});
 
     // Navigation
     document.getElementById('moveLeft').onclick = function() {

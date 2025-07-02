@@ -482,6 +482,7 @@ form textarea {
   justify-content: space-evenly;
   width: -moz-max-content;
   width: max-content;
+  cursor: pointer;
 }
 .work .work__list .work__project .work__project-head p {
   font-family: "Geist Mono", monospace;
@@ -498,10 +499,10 @@ form textarea {
 .work .work__list .work__project .work__project-head .work__btn-modal ion-icon {
   font-size: 1.5rem;
 }
-.work .work__list .work__project:hover {
+.work .work__list .work__project:hover, .work .work__list .work__project.active {
   flex: 10;
 }
-.work .work__list .work__project:hover .work__project-head {
+.work .work__list .work__project:hover .work__project-head, .work .work__list .work__project.active .work__project-head {
   text-align: center;
   transform: rotate(0deg);
   bottom: 0;
